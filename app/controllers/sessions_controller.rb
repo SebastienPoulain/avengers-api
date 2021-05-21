@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
         else
           render json: { 
             status: 401,
-            errors: ['no such user', 'verify credentials and try again or signup']
+            errors: ['Les informations entrées ne correspondent à aucun compte']
           }
         end
       end
@@ -24,7 +24,7 @@ class SessionsController < ApplicationController
         else
           render json: {
             logged_in: false,
-            message: 'no such user'
+            message: 'Vous n''êtes pas connecté'
           }
         end
       end
